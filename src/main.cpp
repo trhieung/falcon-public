@@ -55,11 +55,12 @@ int main(int argc, char** argv)
 	// network += " preloaded"; PRELOADING = true;
 	// preload_network(PRELOADING, network, net);
 
-	start_m();
+	// start_m();
 	//Run unit tests in two modes: 
 	//	1. Debug {Mat-Mul, DotProd, PC, Wrap, ReLUPrime, ReLU, Division, BN, SSBits, SS, and Maxpool}
 	//	2. Test {Mat-Mul1, Mat-Mul2, Mat-Mul3 (and similarly) Conv*, ReLU*, ReLUPrime*, and Maxpool*} where * = {1,2,3}
-	// runTest("Debug", "BN", network);
+	runTest("Debug", "RandBit", network);
+	// runTest("Debug", "MultPub", network);
 	// runTest("Test", "ReLUPrime1", network);
 
 	// Run forward/backward for single layers
@@ -70,21 +71,21 @@ int main(int argc, char** argv)
 	// runOnly(net, l, what, network);
 
 	//Run training
-	network += " train";
-	train(net);
+	// network += " train";
+	// train(net);
 
 	//Run inference (possibly with preloading a network)
 	// network += " test";
 	// test(PRELOADING, network, net);
 
-	end_m(network);
-	cout << "----------------------------------------------" << endl;  	
-	cout << "Run details: " << NUM_OF_PARTIES << "PC (P" << partyNum 
-		 << "), " << NUM_ITERATIONS << " iterations, batch size " << MINI_BATCH_SIZE << endl 
-		 << "Running " << security << " " << network << " on " << dataset << " dataset" << endl;
-	cout << "----------------------------------------------" << endl << endl;  
+	// end_m(network);
+	// cout << "----------------------------------------------" << endl;  	
+	// cout << "Run details: " << NUM_OF_PARTIES << "PC (P" << partyNum 
+	// 	 << "), " << NUM_ITERATIONS << " iterations, batch size " << MINI_BATCH_SIZE << endl 
+	// 	 << "Running " << security << " " << network << " on " << dataset << " dataset" << endl;
+	// cout << "----------------------------------------------" << endl << endl;  
 
-	printNetwork(net);
+	// printNetwork(net);
 
 /****************************** CLEAN-UP ******************************/ 
 	delete aes_indep;

@@ -64,4 +64,8 @@ const myType LARGEST_NEG = ((myType)1 << (BIT_SIZE - 1));
 const myType MINUS_ONE = (myType)-1;
 const smallType BOUNDARY = (256/PRIME_NUMBER) * PRIME_NUMBER;
 
+/********************* Typedefs for rings *********************/
+typedef unsigned long Lint;
+typedef long long int sLint;
+
 #endif
