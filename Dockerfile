@@ -6,6 +6,7 @@ RUN apt-get update \
         make \
         g++ \
         libssl-dev \
+        nano \
         tmux \
     && rm -r /var/lib/apt/lists/*
 
