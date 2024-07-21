@@ -51,7 +51,7 @@ With a base warning displayed in the original repository of the [Falcon framewor
 ### Docker 
 ---
 
-To install and run Falcon using docker, 
+To install and run Falcon using docker by downloading the [Dockerfile](https://github.com/trhieung/falcon-public/blob/master/Dockerfile) in this project, 
 - first build the container:
 ` docker build -t falcon .`
 - Then run the container
